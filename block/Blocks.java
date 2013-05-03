@@ -101,7 +101,7 @@ public class Blocks {
 		oreLevitite = (new BlockSkyOre(blockID++)).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:oreLevitite").setCreativeTab(SkyDimension.tab);
 		blockLevitite = (new BlockOreStorage(blockID++)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:blockLevitite").setCreativeTab(SkyDimension.tab);
 		oreSkylite = (new BlockSkyOre(blockID++)).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:oreSkylite").setCreativeTab(SkyDimension.tab);
-		blockSkylite = (new BlockOreStorage(blockID++)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:blocSkylite").setCreativeTab(SkyDimension.tab);
+		blockSkylite = (new BlockOreStorage(blockID++)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:blockSkylite").setCreativeTab(SkyDimension.tab);
 		oreWelkinite = (new BlockSkyOre(blockID++)).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:oreWelkinite").setCreativeTab(SkyDimension.tab);
 		blockWelkinite = (new BlockOreStorage(blockID++)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("skydimension:blockWelkinite").setCreativeTab(SkyDimension.tab);
 		GameRegistry.registerBlock(oreLevitite, ORE_LEVITITE);
