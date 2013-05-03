@@ -45,6 +45,20 @@ public class ItemSky extends Item {
 	}
 
 	@Override
+	public boolean hasEffect(ItemStack par1ItemStack) {
+		int damage = par1ItemStack.getItemDamage();
+		if(damage == EnumSkyItem.gemBlessedLevitia.ordinal()) return true;
+		if(damage == EnumSkyItem.gemBlessedSkylite.ordinal()) return true;
+		if(damage == EnumSkyItem.gemBlessedWelkinia.ordinal()) return true;
+		if(damage == EnumSkyItem.ingotEnchantedIron.ordinal()) return true;
+		if(damage == EnumSkyItem.ingotEnchantedGold.ordinal()) return true;
+		if(damage == EnumSkyItem.ingotBlessedIron.ordinal()) return true;
+		if(damage == EnumSkyItem.ingotBlessedGold.ordinal()) return true;
+		// TODO 自動生成されたメソッド・スタブ
+		return super.hasEffect(par1ItemStack);
+	}
+
+	@Override
 	public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List) {
 		for(int i = 0; i < EnumSkyItem.values().length; ++i) {
 			par3List.add(new ItemStack(this, 1, i));

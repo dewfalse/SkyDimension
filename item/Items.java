@@ -1,12 +1,10 @@
 package skydimension.item;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import skydimension.Config;
-import skydimension.SkyDimension;
-import skydimension.block.Blocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBucket;
+import net.minecraft.item.ItemBucketMilk;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -15,6 +13,10 @@ import net.minecraftforge.liquids.LiquidContainerData;
 import net.minecraftforge.liquids.LiquidContainerRegistry;
 import net.minecraftforge.liquids.LiquidStack;
 import net.minecraftforge.oredict.OreDictionary;
+import skydimension.Config;
+import skydimension.SkyDimension;
+import skydimension.block.Blocks;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
 
@@ -133,20 +135,20 @@ public class Items {
 		LanguageRegistry.instance().addNameForObject(hoeWelkinia, "en_US", "Welkinia Hoe");
 
 		// ƒoƒPƒc
-		bucketWoodEmpty = new Item(itemID++).setUnlocalizedName("skydimension:bucketWoodEmpty").setCreativeTab(SkyDimension.tab);
+		bucketWoodEmpty = new ItemBucket(itemID++, 0).setUnlocalizedName("skydimension:bucketWoodEmpty").setMaxStackSize(16).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketWoodEmpty, "en_US", "Bucket Wood");
-		bucketWoodWater = new Item(itemID++).setUnlocalizedName("skydimension:bucketWoodWater").setCreativeTab(SkyDimension.tab);
+		bucketWoodWater = new ItemBucket(itemID++, Block.waterMoving.blockID).setUnlocalizedName("skydimension:bucketWoodWater").setContainerItem(bucketWoodEmpty).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketWoodWater, "en_US", "Bucket Wood Water");
-		bucketWoodMilk = new Item(itemID++).setUnlocalizedName("skydimension:bucketWoodMilk").setCreativeTab(SkyDimension.tab);
+		bucketWoodMilk = new ItemBucketMilk(itemID++).setUnlocalizedName("skydimension:bucketWoodMilk").setContainerItem(bucketWoodEmpty).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketWoodMilk, "en_US", "Bucket Wood Milk");
 
-		bucketAmbrosia = new Item(itemID++).setUnlocalizedName("skydimension:bucketAmbrosia").setCreativeTab(SkyDimension.tab);
+		bucketAmbrosia = new ItemBucket(itemID++, Blocks.ambrosiaFlowing.blockID).setUnlocalizedName("skydimension:bucketAmbrosia").setContainerItem(Item.bucketEmpty).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketAmbrosia, "en_US", "Bucket Ambrosia");
-		bucketMana = new Item(itemID++).setUnlocalizedName("skydimension:bucketMana").setCreativeTab(SkyDimension.tab);
+		bucketMana = new ItemBucket(itemID++, Blocks.manaFlowing.blockID).setUnlocalizedName("skydimension:bucketMana").setContainerItem(Item.bucketEmpty).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketMana, "en_US", "Bucket Mana");
-		bucketWoodAmbrosia = new Item(itemID++).setUnlocalizedName("skydimension:bucketWoodAmbrosia").setCreativeTab(SkyDimension.tab);
+		bucketWoodAmbrosia = new ItemBucket(itemID++, Blocks.ambrosiaFlowing.blockID).setUnlocalizedName("skydimension:bucketWoodAmbrosia").setContainerItem(bucketWoodEmpty).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketWoodAmbrosia, "en_US", "Bucket Wood Ambrosia");
-		bucketWoodMana = new Item(itemID++).setUnlocalizedName("skydimension:bucketWoodMana").setCreativeTab(SkyDimension.tab);
+		bucketWoodMana = new ItemBucket(itemID++, Blocks.manaFlowing.blockID).setUnlocalizedName("skydimension:bucketWoodMana").setContainerItem(bucketWoodEmpty).setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bucketWoodMana, "en_US", "Bucket Wood Mana");
 		LiquidContainerRegistry.registerLiquid(new LiquidContainerData(new LiquidStack(Block.waterStill, LiquidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketWoodWater), new ItemStack(bucketWoodEmpty)));
 		LiquidContainerRegistry.registerLiquid(new LiquidContainerData(new LiquidStack(Blocks.ambrosiaStationary, LiquidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketWoodAmbrosia), new ItemStack(bucketWoodEmpty)));
