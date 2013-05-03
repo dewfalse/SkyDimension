@@ -56,15 +56,14 @@ public class Items {
 		// アンブロシア
 		redFruit = new ItemFood(itemID++, 4, 0.3F, false).setUnlocalizedName("skydimension:redFruit").setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(redFruit, "en_US", "Red Fruit");
-
-		ambrosia = new ItemFood(itemID++, 8, 0.6F, false).setAlwaysEdible().setPotionEffect(Potion.regeneration.id, 40, 0, 1.0F).setUnlocalizedName("skydimension:ambrosia").setCreativeTab(SkyDimension.tab);
+		ambrosia = new ItemMagicDrink(itemID++, 8, 0.6F, false).setAlwaysEdible().setPotionEffect(Potion.regeneration.id, 40, 0, 1.0F).setUnlocalizedName("skydimension:ambrosia").setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(ambrosia, "en_US", "Ambrosia");
 
 
 		// ブラッドフルーツ
 		bloodFruit = new Item(itemID++).setUnlocalizedName("skydimension:bloodFruit").setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bloodFruit, "en_US", "Blood Fruit");
-		bloodyPotion = new Item(itemID++).setUnlocalizedName("skydimension:bloodyPotion").setCreativeTab(SkyDimension.tab);
+		bloodyPotion = new ItemMagicDrink(itemID++, 8, 0.6F, false).setAlwaysEdible().setPotionEffect(Potion.resistance.id, 40, 0, 1.0F).setUnlocalizedName("skydimension:bloodyPotion").setCreativeTab(SkyDimension.tab);
 		LanguageRegistry.instance().addNameForObject(bloodyPotion, "en_US", "Bloody Potion");
 
 		// 宝石
